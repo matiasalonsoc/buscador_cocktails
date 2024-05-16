@@ -63,13 +63,13 @@ export const Header = () => {
             <img className=' w-32' src='/logo.svg' alt='logotipo' />
           </div>
 
-          <nav className=' flex gap-3'>
+          <nav className=' flex bg-white rounded-2xl'>
             <NavLink
               to='/'
               className={({ isActive }) =>
                 isActive
-                  ? "text-orange-400 uppercase font-bold"
-                  : "text-white uppercase font-bold"
+                  ? "w-36 text-center transition-all text-black uppercase font-bold bg-orange-400 px-5 py-3 rounded-2xl"
+                  : "w-36 text-center transition-all text-black uppercase font-bold px-5 py-3 rounded-2xl"
               }
             >
               inicio
@@ -78,8 +78,8 @@ export const Header = () => {
               to='/favorites'
               className={({ isActive }) =>
                 isActive
-                  ? "text-orange-400 uppercase font-bold"
-                  : "text-white uppercase font-bold"
+                  ? "text-black w-36 transition-all text-center uppercase font-bold bg-orange-400 px-5 py-3 rounded-2xl"
+                  : "text-black w-36 transition-all text-center uppercase font-bold px-5 py-3 rounded-2xl"
               }
             >
               Favoritos
