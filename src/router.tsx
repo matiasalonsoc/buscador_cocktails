@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./layouts/Layout";
-import { Favorites } from "./views/Favorites";
+import Favorites from "./views/Favorites";
 import { IndexPage } from "./views/IndexPage";
 
 export const AppRouter = () => {

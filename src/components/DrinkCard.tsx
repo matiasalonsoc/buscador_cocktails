@@ -1,3 +1,4 @@
+import { useAppStore } from "../stores/useAppStore";
 import { InfoFilter } from "../types";
 
 type DrinkCardProps = {
@@ -5,6 +6,8 @@ type DrinkCardProps = {
 };
 
 export const DrinkCard = ({ drink }: DrinkCardProps) => {
+  const { selectRecipe } = useAppStore();
+
   return (
     <div className='  rounded-lg border shadow-2xl'>
       <div className='overflow-hidden'>
@@ -18,6 +21,7 @@ export const DrinkCard = ({ drink }: DrinkCardProps) => {
       <div className='p-5'>
         <h2 className='text-2xl truncate font-black'>{drink.strDrink}</h2>
         <button
+          onClick={() => selectRecipe(drink.idDrink)}
           type='button'
           className='bg-orange-400 transition-colors rounded-xl hover:bg-orange-500 mt-5 w-full p-3 font-bold text-white text-lg'
         >
